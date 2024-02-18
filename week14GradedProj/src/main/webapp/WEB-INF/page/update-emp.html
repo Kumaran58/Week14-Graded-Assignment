@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Update the Employee List</title>
+<style>
+      body {
+           background-color: #ffc0cb;
+           display: flex;
+           justify-content: flex-end;
+           height: 100vh; 
+           margin: 0;  
+           padding: 20px;
+      }
+</style>
+</head>
+<body>
+
+    <form action="update-save-emp" method="post">
+
+        <table border="3" >
+			
+			
+            <tr hidden>
+                <td>id</td>
+                <td><input type="text" readonly required name="id" th:value="${emp1.id}"></td>
+            </tr>
+
+
+            <tr>
+                <td>Employee Name</td>
+                <td><input type="text" required name="employeeName" th:value="${emp1.employeeName}"></td>
+            </tr>
+
+            <tr>
+                <td>Employee Address</td>
+                <td><input type="text" required name="employeeAddress" th:value="${emp1.employeeAddress}"></td>
+            </tr>
+
+            <tr>
+                <td>Employee Phone</td>
+                <td><input type="number" required name="employeePhone" th:value="${emp1.employeePhone}"></td>
+            </tr>
+
+            <tr>
+                <td>Employee Salary</td>
+                <td><input type="number" required name="employeeSalary" th:value="${emp1.employeeSalary}"></td>
+            </tr>
+
+            <tr>
+                <td><button type="submit"> Save..</button></td>
+                <td><button type="reset"> ReSet..</button></td>
+            </tr>
+
+        </table>
+
+    </form>
+
+
+</body>
+</html>
+
+
+
